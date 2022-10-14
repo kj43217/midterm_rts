@@ -24,7 +24,7 @@ public class AgentMovement : MonoBehaviour
 
     void SetTargetPosition()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
