@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public Transform target;
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("Attack entered");
@@ -11,6 +14,15 @@ public class Attack : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        Debug.Log("Attack stay");
+        //Debug.Log("Attack stay");
+        Vector3 Look = transform.InverseTransformPoint(target.transform.position);
+        float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
+
+        transform.Rotate(0, 0, Angle);
+    }
+
+    void shoot()
+    {
+        Debug.Log("shooting");
     }
 }
