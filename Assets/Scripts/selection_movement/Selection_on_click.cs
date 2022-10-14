@@ -19,20 +19,8 @@ public class Selection_on_click : MonoBehaviour
         foreach (GameObject unit in UnitsToDisable)
         {
             unit.GetComponent<Selection_on_click>().selected = false;
+            Debug.Log("units disabled");
         }
-        
-        
-        
-        
-        
-        
-        /* for (int i = 1; i == counter; i++)
-        {
-            unit = UnitsToDisable[i];
-            unit.GetComponent<Selection_on_click>().selected = false;
-           
-        }*/
-       
 
     }
 

@@ -3,6 +3,9 @@ using UnityEngine.AI;
 
 public class AgentMovement : MonoBehaviour
 {
+    GameObject[] UnitsToDisable;//----------------
+                                //unit selection variables
+    public bool selected = false;//--------------
 
     private Vector3 target;
     NavMeshAgent agent;
@@ -19,12 +22,31 @@ public class AgentMovement : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
-
+    //when collider is clicked--------------------------------------------------
+    void OnMouseDown()
+    {
+        if (selected == false)   //activates and deactivates player units
+        {
+            UnselectUnits();
+            selected = true;
+            Debug.Log("on");
+        }
+        else if (selected == true)
+        {
+            selected = false;
+            Debug.Log("off");
+        }
+    }
+    //------------------------------------------------------------------------------
     // Update is called once per frame
     void Update()
     {
+        if(selected == true)
+        {
         SetTargetPosition();
         SetAgentPosition();
+        }
+        
 
 
     }
@@ -41,14 +63,28 @@ public class AgentMovement : MonoBehaviour
     void SetAgentPosition()
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
-        /*if (attack.inCombat == false)
+        if (attack.inCombat == false)
         {
             Vector3 Look = transform.InverseTransformPoint(target);
             float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
 
             transform.Rotate(0, 0, Angle);
 
-        }*/
+        }
         
+    }
+
+    void UnselectUnits()
+    {
+        UnitsToDisable = GameObject.FindGameObjectsWithTag("PlayerControlledUnits");
+
+    
+        foreach (GameObject unit in UnitsToDisable)
+        {
+            Debug.Log("Iwork");
+            unit.GetComponent<AgentMovement>().selected = false;
+            Debug.Log("units disabled");
+        }
+
     }
 }
