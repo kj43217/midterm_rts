@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public Transform target;
-
+    public bool inCombat = false;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -19,10 +19,11 @@ public class Attack : MonoBehaviour
         float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
 
         transform.Rotate(0, 0, Angle);
+        inCombat = true;
     }
 
-    void shoot()
+    void OnTriggerExit2D()
     {
-        Debug.Log("shooting");
+        inCombat = false;
     }
 }

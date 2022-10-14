@@ -361,6 +361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b2d2bbaa48e7242aed1c593c81efcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  attack: {fileID: 758899400}
 --- !u!195 &758899396
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -485,6 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1317890507}
+  inCombat: 0
 --- !u!58 &758899401
 CircleCollider2D:
   m_ObjectHideFlags: 0
