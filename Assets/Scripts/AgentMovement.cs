@@ -41,14 +41,14 @@ public class AgentMovement : MonoBehaviour
     void SetAgentPosition()
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
-        if (attack.inCombat == false)
+        /*if (attack.inCombat == false)
         {
             Vector3 Look = transform.InverseTransformPoint(target);
             float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
 
             transform.Rotate(0, 0, Angle);
 
-        }
+        }*/
         
     }
 }

@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 41337223}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: player controled units
+  m_TagString: PlayerControlledUnits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b2d2bbaa48e7242aed1c593c81efcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  attack: {fileID: 0}
 --- !u!195 &41337220
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -344,7 +346,7 @@ GameObject:
   - component: {fileID: 217967557}
   m_Layer: 0
   m_Name: Square
-  m_TagString: player controled units
+  m_TagString: PlayerControlledUnits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,6 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b2d2bbaa48e7242aed1c593c81efcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0
+  attack: {fileID: 0}
 --- !u!195 &217967554
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -747,7 +751,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341101833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d9a12dd1a7206458a57a9bba4382f9, type: 3}
   m_Name: 

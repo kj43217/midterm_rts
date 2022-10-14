@@ -5,31 +5,43 @@ using UnityEngine;
 public class Selection_on_click : MonoBehaviour
 {
     GameObject[] UnitsToDisable ;
+    GameObject unit;
     public bool selected = false;
 
     void UnselectUnits()
     {
-        UnitsToDisable = GameObject.FindGameObjectsWithTag("PlayerControlledUnit");
+        UnitsToDisable = GameObject.FindGameObjectsWithTag("PlayerControlledUnits");
 
-        foreach (GameObject.FindGameObjectWithTag("PlayerControlledUnit") in UnitsToDisable)
+        int counter;
+        counter = UnitsToDisable.Length;
+       
+       
+        foreach (GameObject unit in UnitsToDisable)
         {
-
-            selected = false;
-
+            unit.GetComponent<Selection_on_click>().selected = false;
         }
-
+        
+        
+        
+        
+        
+        
+        /* for (int i = 1; i == counter; i++)
+        {
+            unit = UnitsToDisable[i];
+            unit.GetComponent<Selection_on_click>().selected = false;
+           
+        }*/
+       
 
     }
 
 
-
-
-
     void OnMouseDown()
     {
-        
+       
 
-     
+
         if (selected == false)
         {
             UnselectUnits();
