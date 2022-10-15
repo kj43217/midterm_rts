@@ -26,4 +26,5 @@ public class Attack : MonoBehaviour
     {
         inCombat = false;
     }
+    
 }
