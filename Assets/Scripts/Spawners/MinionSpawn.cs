@@ -12,8 +12,8 @@ public class MinionSpawn : MonoBehaviour
 
     private IEnumerator spawnMinion(float intreval, GameObject minion){
         yield return new WaitForSeconds(intreval);
-        GameObject newMinion = Instantiate(minion, new Vector3(Random.Range(-5f, 5), Random.Range(-6f,6f), 0), Quaternion.identity);
-        StartCoroutine(spawnMinion(intreval, minion));
+        GameObject newMinion = Instantiate(minion, new Vector3((8f), (3f), 0), Quaternion.identity);
+        //StartCoroutine(spawnMinion(intreval, minion)); ---------------------/To spawn infinite minions
     }
 
     private void Start() {
