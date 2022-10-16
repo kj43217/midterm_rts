@@ -18,10 +18,10 @@ public class Attack : MonoBehaviour
 
     private void Update()
     {
-        if (inCombat)
+        /*if (inCombat)
         {
             ChangeSprite();
-        }
+        }*/
     }
 
     void OnTriggerEnter2D(Collider2D col)
