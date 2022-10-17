@@ -10,17 +10,24 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public GameObject leader;
     public GameObject minion;
+
+    
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        leader.GetComponent<>currentHealth = maxHealth;
+        
+        
         healthBar.setMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+    
+
+
 
       
     }
