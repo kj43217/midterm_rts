@@ -6,46 +6,60 @@ public class Attack : MonoBehaviour
 {
     public Transform target;
     public bool inCombat = false;
+    //----------------------------- animation change when attack
+    public Animator animator;
 
-    public SpriteRenderer spriteRenderer;//----------------------------- animation change when attack
-    public Sprite newSprite;
-    public Sprite[] spriteArray;
+    public int fireDelay;
 
-    void Start()
-    {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
+    public bool gunshooting;
+    public AudioSource gunfire;
 
     private void Update()
     {
-        /*if (inCombat)
+        if (inCombat)
         {
-            ChangeSprite();
-        }*/
+            if (!gunshooting)
+            {
+                gunshooting = true;
+                StartCoroutine(GunFire());
+            }
+        }
+        else
+        {
+            gunshooting = false;
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("Attack entered");
-    }
 
     void OnTriggerStay2D(Collider2D col)
     {
-        //Debug.Log("Attack stay");
-        Vector3 Look = transform.InverseTransformPoint(target.transform.position);
-        float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
+        if (col.CompareTag("Dummy"))
+        {
+            //Debug.Log("Attack stay");
+            Vector3 Look = transform.InverseTransformPoint(target.transform.position);
+            float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
+            transform.Rotate(0, 0, Angle);
 
-        transform.Rotate(0, 0, Angle);
-        inCombat = true;
+            inCombat = true;
+            animator.SetBool("incombat", true);
+
+        }
     }
 
     void OnTriggerExit2D()
     {
         inCombat = false;
-        ChangeSprite();
+        animator.SetBool("incombat", false);
+
+        gunfire.Stop();
     }
-    void ChangeSprite()
+
+    IEnumerator GunFire()
     {
-        spriteRenderer.sprite = spriteArray[0];
+        while (gunshooting)
+        {
+            gunfire.Play();
+            yield return new WaitForSeconds(gunfire.clip.length);
+        }
     }
 }

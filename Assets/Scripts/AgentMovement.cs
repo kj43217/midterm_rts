@@ -15,8 +15,6 @@ public class AgentMovement : MonoBehaviour
 
     public Attack attack;
 
-    public float Health = 100f;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -73,7 +71,6 @@ public class AgentMovement : MonoBehaviour
             transform.Rotate(0, 0, Angle);
 
         }
-        
     }
 
     void UnselectUnits()

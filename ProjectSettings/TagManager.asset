@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerControlledUnits
+  - Dummy
+  - Minefield
   layers:
   - Default
   - TransparentFX
