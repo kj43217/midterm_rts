@@ -8,22 +8,21 @@ public class Player : MonoBehaviour
     public float currentHealth;
 
     public HealthBar healthBar;
-    public Attack attack;
+    public GameObject leader;
+    public GameObject minion;
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        leader.GetComponent<>currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (attack.inCombat) 
-        {
-            TakeDamage(0.3f);
-            Debug.Log("hola");
-        }
+       
+
+      
     }
 
     void TakeDamage(float damage)
