@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public Transform target;
-    public bool inCombat = false;
+    public bool in_Combat = false;
     //----------------------------- animation change when attack
     public Animator animator;
 
@@ -16,7 +16,7 @@ public class Attack : MonoBehaviour
 
     private void Update()
     {
-        if (inCombat)
+        if (in_Combat)
         {
             if (!gunshooting)
             {
@@ -40,7 +40,7 @@ public class Attack : MonoBehaviour
             float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg - 90;
             transform.Rotate(0, 0, Angle);
 
-            inCombat = true;
+            in_Combat = true;
             animator.SetBool("incombat", true);
 
         }
@@ -48,7 +48,7 @@ public class Attack : MonoBehaviour
 
     void OnTriggerExit2D()
     {
-        inCombat = false;
+        in_Combat = false;
         animator.SetBool("incombat", false);
 
         gunfire.Stop();

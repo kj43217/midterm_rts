@@ -399,8 +399,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 6312814416577513721}
-  leader: {fileID: 4628472060256870469, guid: 3457995aebaab9b4da7fbe6b7ad3be6b, type: 3}
-  minion: {fileID: 6386564476033983557, guid: 4e8e1aeb916065f4896ac86205a9ee3c, type: 3}
+  leaderScr: {fileID: 4628472060256870471, guid: 3457995aebaab9b4da7fbe6b7ad3be6b, type: 3}
+  MinionScr: {fileID: 6657371680412484156, guid: 4e8e1aeb916065f4896ac86205a9ee3c, type: 3}
 --- !u!1 &6312814417075199097
 GameObject:
   m_ObjectHideFlags: 0

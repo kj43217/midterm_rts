@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4628472060256870584}
   - component: {fileID: 4628472060256870585}
   m_Layer: 0
-  m_Name: Square
+  m_Name: leader
   m_TagString: PlayerControlledUnits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

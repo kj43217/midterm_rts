@@ -8,10 +8,9 @@ public class Player : MonoBehaviour
     public float currentHealth;
 
     public HealthBar healthBar;
-    public GameObject leader;
-    public GameObject minion;
-
+    public Attack leaderScr;
     
+    bool takingDamage;
 
     
     // Start is called before the first frame update
@@ -19,22 +18,29 @@ public class Player : MonoBehaviour
     {
         
         
+        currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-
-
-
-      
+        takingDamage = leaderScr.in_Combat;
+        Debug.Log(leaderScr.in_Combat);
+        
+        if(leaderScr.in_Combat)
+        {
+            TakeDamage(10f);
+        }
     }
 
     void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        
+            Debug.Log("Dealing Damage");
+            currentHealth -= damage * Time.deltaTime;
         healthBar.setHealth(currentHealth);
+        
+
     }
 }
