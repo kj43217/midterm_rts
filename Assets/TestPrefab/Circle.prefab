@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6312814416777376070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.72, y: -0.16, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -381,9 +381,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.15143871, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 7.125408
 --- !u!114 &6312814416777376066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,8 +399,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 6312814416577513721}
-  leaderScr: {fileID: 4628472060256870471, guid: 3457995aebaab9b4da7fbe6b7ad3be6b, type: 3}
-  MinionScr: {fileID: 6657371680412484156, guid: 4e8e1aeb916065f4896ac86205a9ee3c, type: 3}
 --- !u!1 &6312814417075199097
 GameObject:
   m_ObjectHideFlags: 0

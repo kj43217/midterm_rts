@@ -20,7 +20,7 @@ public class MinionHealth : MonoBehaviour
     {
         if (collision.CompareTag("Minefield"))
         {
-            TakeDamage(0.10f);
+            TakeDamage(0.30f);
         }
     }
 

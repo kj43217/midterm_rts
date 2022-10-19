@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6312814416777376071, guid: dce1590572cf18c4b96c1039ae58319b, type: 3}
-  inCombat: 0
+  in_Combat: 0
   animator: {fileID: 4628472060256870584}
   fireDelay: 10
   gunshooting: 0
@@ -201,9 +201,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000047683716, y: 0}
   serializedVersion: 2
-  m_Radius: 8.84
+  m_Radius: 1.0434813
 --- !u!95 &4628472060256870584
 Animator:
   serializedVersion: 4
