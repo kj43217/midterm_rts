@@ -16,20 +16,6 @@ public class Player : MonoBehaviour
         healthBar.setMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*takingDamage = leaderScr.in_Combat;
-        Debug.Log(leaderScr.in_Combat);
-        
-
-
-        if(leaderScr.in_Combat)
-        {
-            TakeDamage(10f);
-        }*/
-    }
-
     void OnTriggerStay2D(Collider2D col)
     {
         if (col.CompareTag("PlayerControlledUnits"))

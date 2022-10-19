@@ -28,7 +28,6 @@ public class MinionSpawn : MonoBehaviour
                 StartCoroutine(spawnMinion(swarmerInterval, minions[0]));
             }
         }
-
     }
 
     private IEnumerator spawnMinion(float intreval, GameObject minion){

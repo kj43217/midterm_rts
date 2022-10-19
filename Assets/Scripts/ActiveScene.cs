@@ -10,7 +10,6 @@ public class ActiveScene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-
         }
     }
     public static void PlayGame(int sceneIndex)

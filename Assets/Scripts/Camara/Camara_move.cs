@@ -21,15 +21,13 @@ public class Camara_move : MonoBehaviour
     }
 
     private void Update() {
-        //inputs to interract
+        //-----------------------*inputs to interract
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        //scroll
-
+        //------------------------------*scroll
         float scrollData;
         scrollData = Input.GetAxis("Mouse ScrollWheel");
-        Debug.Log(scrollData);
         targetZoom -= scrollData * zoomFactor;
         targetZoom = Mathf.Clamp(targetZoom, 4.5f, 8);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
@@ -37,7 +35,7 @@ public class Camara_move : MonoBehaviour
 
 
     private void FixedUpdate() {
-        //movment more accurate
+        //----------------------movment more accurate
         rb.MovePosition(rb.position + movement * Speed * Time.fixedDeltaTime);
     }
 }
